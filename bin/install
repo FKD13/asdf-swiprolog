@@ -60,8 +60,7 @@ curl -Lo "$source_path" "$download_url"
     cmake \
       -DCMAKE_BUILD_TYPE=PGO \
       -DCMAKE_INSTALL_PREFIX="$ASDF_INSTALL_PATH" \
-      -G Ninja \
-      ..
+      -G Ninja
 
     ninja -j "$(nproc)"
     ninja install
