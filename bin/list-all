@@ -3,11 +3,11 @@ releases_path=https://www.swi-prolog.org/download/stable/src/
 devel_releases_path=https://www.swi-prolog.org/download/devel/src/
 
 function get_versions_page() {
-    curl -s "$releases_path"
+    curl -s --compressed "$releases_path"
 }
 
 get_devel_versions_page() {
-    curl -s "$devel_releases_path"
+    curl -s --compressed "$devel_releases_path"
 }
 
 extract_versions_numbers() {
